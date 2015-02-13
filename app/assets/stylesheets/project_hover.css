@@ -100,6 +100,7 @@
 
 .hs-overlay span{
   font-family: 'Cabin Condensed', sans-serif;
+  text-shadow: 1px 1px #182F4D;
   margin: 0.5em auto;
   display: block;
   padding: 20px;
