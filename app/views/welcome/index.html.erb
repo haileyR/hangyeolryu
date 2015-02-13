@@ -28,7 +28,25 @@
       <span><h4>Know Your Values</h4>Web application that allows users to ask their friends to endorse their values so that they can develop and pitch them as their strengths.<br> Built with Ruby on Rails, AJAX and jQuery. </span>
     </div>
     <div class="hs-footer" align="center">
-      <a href="https://know-your-values.herokuapp.com">Visit Know Your Values  : :</a><a href="https://github.com/haileyR/Know-Your-Values-on-Rails">View Code</a>
+      <%= link_to "Visit Know Your Values  :", "https://know-your-values.herokuapp.com", target: "_blank" %>
+      <%= link_to "View Code", "https://github.com/haileyR/Know-Your-Values-on-Rails", target: "_blank" %>
+    </div>
+
+  </div>
+
+  <div class="hs-wrapper">
+    <%= image_tag("memerymath1.png", alt: "image01") %>
+    <%= image_tag("memerymath1.png", alt: "image02") %>
+    <%= image_tag("memerymath1.png", alt: "image03") %>
+    <%= image_tag("memerymath1.png", alt: "image04") %>
+    <%= image_tag("memerymath1.png", alt: "image05") %>
+
+    <div class="hs-overlay">
+      <span><h4>Memory Math</h4>Math memory game built with JavaScript (jQuery).</span>
+    </div>
+    <div class="hs-footer" align="center">
+      <%= link_to "Play   :", memorymath_path%>
+      <%= link_to "View Code", "https://github.com/haileyR/hangyeolryu/tree/master/app/assets/javascripts/memorymath", target: "_blank" %>
     </div>
 
   </div>
