@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
+    <link href='//fonts.googleapis.com/css?family=Abel' rel='stylesheet' type='text/css'>
+    <link href='//fonts.googleapis.com/css?family=Cabin+Condensed' rel='stylesheet' type='text/css'>
+    <link href='//fonts.googleapis.com/css?family=Lobster' rel='stylesheet' type='text/css'>
+    <link href='//fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
+    <link href='//fonts.googleapis.com/css?family=Yanone+Kaffeesatz' rel='stylesheet' type='text/css'>
+    <link href='//fonts.googleapis.com/css?family=Indie+Flower' rel='stylesheet' type='text/css'>
+    <link href='//fonts.googleapis.com/css?family=Maven+Pro' rel='stylesheet' type='text/css'>
+    <link href='//fonts.googleapis.com/css?family=Coming+Soon' rel='stylesheet' type='text/css'>
+  <title>Hangyeolryu</title>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+
+  <%= csrf_meta_tags %>
+</head>
+<body>
+
+  <header>
+    <h1>Hailey HanGyeol Ryu</h1>
+    <nav role="navigation">
+      <ul>
+
+        <li>
+          <div class="ch-item-icon">
+          <%= link_to "https://www.linkedin.com/in/haileyryu", target: "_blank" do %>
+            <i  style="position: absolute;" class="fa fa-linkedin fa-3x"></i>
+          <% end %>
+          </div>
+        </li>
+        <li>
+          <div class="ch-item-icon">
+          <%= link_to "https://github.com/haileyR", target: "_blank" do %>
+            <i  style="position: absolute;" class="fa fa-github fa-3x"></i>
+          <% end %>
+          </div>
+        </li>
+        <li>
+          <div class="ch-item-icon envelop">
+          <%= link_to "https://github.com/haileyR", target: "_blank" do %>
+          <i style="position: absolute;" class="fa fa-envelope fa-3x"></i>
+          <% end %>
+          </div>
+        </li>
+      </ul>
+    </nav>
+
+    <div class="ch-item aboutme" style="background-image: url(assets/myphoto.jpg);">
+      <div class="ch-info">
+        <h3>Hailey HanGyeol Ryu</h3>
+        <p>by Angela Duncan <a href="http://drbl.in/eOPF">View on Dribbble</a></p>
+      </div>
+    </div>
+
+
+
+  </header>
+
+<%= yield %>
+
+</body>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+</html>

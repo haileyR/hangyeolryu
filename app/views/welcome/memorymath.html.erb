@@ -1,0 +1,42 @@
+<div class='memorymath-container' role='main'>
+  <h2>Memory Math (hard)</h2>
+  <i class="fa fa-times fa-5x"></i>
+  <i class="fa fa-check fa-5x"></i>
+  <p>Start the game and click a number, an operation, and a number to make a given number.<br>+1 for a correct answer, -2 for viewing the hint.</p>
+  <table align="center" id='board' style="float: left;">
+    <tr id='row0'>
+      <td class="cell" id='0'><span class="insideTd"></span></td>
+      <td class="cell" id='1'><span class="insideTd"></span></td>
+      <td class="cell" id='2'><span class="insideTd"></span></td>
+      <td class="cell" id='3'><span class="insideTd"></span></td>
+    </tr>
+    <tr id='row1'>
+      <td class="cell" id='4'><span class="insideTd"></span></td>
+      <td class="cell" id='5'><span class="insideTd"></span></td>
+      <td class="cell" id='6'><span class="insideTd"></span></td>
+      <td class="cell" id='7'><span class="insideTd"></span></td>
+    </tr>
+    <tr id='row2'>
+      <td class="cell" id='8'><span class="insideTd"></span></td>
+      <td class="cell" id='9'><span class="insideTd"></span></td>
+      <td class="cell" id='10'><span class="insideTd"></span></td>
+      <td class="cell" id='11'><span class="insideTd"></span></td>
+    </tr>
+    <tr id='row3'>
+      <td class="cell" id='12'><span class="insideTd"></span></td>
+      <td class="cell" id='13'><span class="insideTd"></span></td>
+      <td class="cell" id='14'><span class="insideTd"></span></td>
+      <td class="cell" id='15'><span class="insideTd"></span></td>
+    </tr>
+  </table>
+
+  <div style="width:300px; float: right;">
+    <button id='newgame' type="submit">New Game</button>
+    <button type='button' id='hint'>Hint</button>
+    <h2 id="numberToMake">Number to Make:<br>
+      <p id='question'></p>
+      <p id='equation'></p>
+    </h2>
+    <h2 id='score'></h2>
+  </div>
+</div>

@@ -1,0 +1,49 @@
+.memorymath-container {
+  width: 43%;
+  height: 100%;
+  position: relative;
+  text-align: center;
+  display: inline-block;
+  margin: 2em 0 0 27em;
+}
+
+.memorymath-container .fa{
+  position: absolute;
+  left: 1em;
+  font-size: 15em;
+  display: none;
+}
+
+.fa-times{
+  color: #FF5E5E;
+  opacity: 0.8;
+}
+.fa-check{
+  color: #5EFF7C;
+  opacity: 0.8;
+}
+
+table, th, td {
+
+  border: 3px solid #338acc;
+}
+
+td{
+  height: 70px;
+  width: 70px;
+  font-family: 'Abel', sans-serif;
+  font-size: 3em;
+  color: #1e5783;
+}
+
+button{
+  background: transparent;
+  font-weight: bold;
+  font-size: 1.7em;
+  text-align: center;
+  border: 2.5px solid #B0C4DE;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  font-family: 'Abel', sans-serif;
+  margin-bottom: 10px;
+}
