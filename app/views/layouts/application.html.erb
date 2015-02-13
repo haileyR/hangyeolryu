@@ -39,7 +39,10 @@
         <li>
           <div class="ch-item-icon envelop">
           <%= link_to "https://github.com/haileyR", target: "_blank" do %>
-          <i style="position: absolute;" class="fa fa-envelope fa-3x"></i>
+          <%= mail_to "hangyeolryu@gmail.com" do %>
+            <i style="position: absolute;" class="fa fa-envelope fa-3x"></i>
+          <% end %>
+
           <% end %>
           </div>
         </li>
