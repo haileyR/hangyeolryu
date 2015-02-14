@@ -44,7 +44,6 @@ MemoryMathController.prototype._bindEventListener = function(event){
     self.clickCount+=1;
     self.view.equationElement.innerHTML = self.view.equationElement.innerHTML+' '+self.model.board_seq[this.id];
     self.clickedTds.push(this.id);
-    console.log(self.clickCount)
     if(self.clickCount===1 || self.clickCount===3){
       if(typeof self.model.board_seq[this.id] === 'string'){
         $('.fa-times').fadeIn();
