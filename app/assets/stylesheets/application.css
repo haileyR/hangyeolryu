@@ -81,8 +81,9 @@ h1 a{
 h1 a:hover{
   color: #5E80AD;
 }
-h3 {
+#introduction-header {
   font-family: "Coming Soon", "Comic Sans MS", "Comic Sans MS", sans-serif;
+  padding: 2em;
 
 }
 #introduction {
@@ -92,7 +93,7 @@ h3 {
   padding: 2em;
 }
 #introduction-container{
-  margin-top: 10em;
+  margin: 5em 0 0 15em;
 }
 
 h3{
