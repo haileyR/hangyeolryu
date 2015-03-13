@@ -86,11 +86,12 @@ h1 a:hover{
 }
 #introduction {
   font-family: "Coming Soon", "Comic Sans MS", "Comic Sans MS", sans-serif;
-  width: 70%;
   padding-bottom: 2em;
 }
 #introduction-container{
-  margin: 5em 0 0 20em;
+  width: 55%;
+  margin: 5em 20em 0em;
+  text-align: center;
 }
 
 h3{
