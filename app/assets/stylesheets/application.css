@@ -42,10 +42,6 @@ nav li a{
 
 nav ul li{
   display: inline-block;
-  position: relative;
-  top: 2.7em;
-  float: right;
-  right: 23em;
   margin-right: 2em;
   background-color: white;
 }
@@ -172,14 +168,9 @@ th{
 
 }
 
-.footer{
-  position: relative;
-  display: inline-block;
-
-  border: 1px solid #B0C4DE;
-  border-left: 4px solid #ADD8E6;
-  padding-left: 30px;
-  width: 25%;
+footer{
+  width: 100%;
+  margin-bottom: 2em;
 }
 
 

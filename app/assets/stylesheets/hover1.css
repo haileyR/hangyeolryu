@@ -1,9 +1,7 @@
-header .aboutme{
+footer .aboutme{
   width: 16em;
   height: 16em;
-  position: absolute;
-  top: 1em;
-  right: 6%;
+  margin: 0 auto;
 }
 
 .ch-item {
@@ -41,7 +39,6 @@ header .aboutme{
 }
 
 .ch-info {
-  position: absolute;
   width: 100%;
   height: 100%;
   border-radius: 50%;

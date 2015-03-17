@@ -50,18 +50,21 @@
       </ul>
     </nav>
 
-    <div class="ch-item aboutme" style="background-image: url(<%= asset_path('myphoto.jpg') %>);">
-      <div class="ch-info">
-        <h3>Thank you for visiting.</h3>
-        <p>by Hailey HanGyeol Ryu <!-- <a href="/">About me</a> --></p>
-      </div>
-    </div>
 
 
 
   </header>
 
 <%= yield %>
+
+  <footer align="center">
+    <div class="ch-item aboutme" style="background-image: url(<%= asset_path('myphoto.jpg') %>);">
+      <div class="ch-info">
+        <h3>Thank you for visiting.</h3>
+        <p>by Hailey HanGyeol Ryu <!-- <a href="/">About me</a> --></p>
+      </div>
+    </div>
+  </footer>
 
 </body>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
