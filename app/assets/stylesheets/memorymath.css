@@ -1,16 +1,14 @@
 .memorymath-container {
   width: 46%;
   height: 100%;
-  position: relative;
   text-align: center;
-  display: inline-block;
-  margin: 2em 0 0 27em;
+  margin: 2em auto;
 }
 
 .memorymath-container .fa{
   position: absolute;
-  left: 1em;
-  font-size: 15em;
+  left: 43%;
+  font-size: 17em;
   display: none;
 }
 

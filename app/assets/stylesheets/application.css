@@ -40,9 +40,13 @@ nav li a{
   color: #FA9DCD;
 }
 
+nav ul {
+  padding: 0;
+}
+
 nav ul li{
   display: inline-block;
-  margin-right: 2em;
+    margin: 0 3em;
   background-color: white;
 }
 nav ul li a{
@@ -81,13 +85,10 @@ h1 a:hover{
 }
 #introduction-container, #projects-container{
   width: 55%;
-  margin: 2% 20% 0em;
+  margin: 2em auto;
   padding: 1em;
   text-align: center;
   border: 3px solid #B0C4DE;
-}
-#projects-container{
-  margin: 0em 20% 5%;
 }
 #down-arrow img{
   opacity: 0.7;
