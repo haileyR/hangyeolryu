@@ -1,0 +1,34 @@
+.container {
+  text-align: center;
+}
+
+#game-grid {
+  width: 624px;
+  height: 624px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.grid-row {
+
+}
+
+.block {
+  float: left;
+  border: 3px solid black;
+  height: 150px;
+  width: 150px;
+  text-align: center;
+  font-size: 6em;
+  font-family: 'Nunito', sans-serif;
+}
+
+.number {
+  margin-top: 8px;
+}
+
+#score {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 3em;
+}
