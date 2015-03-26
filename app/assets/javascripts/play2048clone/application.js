@@ -23,7 +23,6 @@ $(document).ready(function() {
   }, 'keyup');
 });
 
-
 var updateBoard = function() {
   $('#score').text("Total Score: " + game.totalScore())
   $.each($('.number'), function(index, number) {
