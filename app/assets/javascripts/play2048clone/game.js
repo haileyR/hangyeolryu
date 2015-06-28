@@ -69,6 +69,7 @@ Game2048.prototype.checkBoardToLeft = function(subArrays){
       for(var sub_index=0; sub_index < subArray.length; sub_index++){
         if(subArray[sub_index] === subArray[sub_index+1]){
           combinedArr.push(subArray[sub_index] + subArray[sub_index+1]);
+          this.totalScore += subArray[sub_index] + subArray[sub_index+1];
           sub_index++;
         }else{
           combinedArr.push(subArray[sub_index]);
@@ -92,6 +93,7 @@ Game2048.prototype.checkBoardToRight = function(subArrays){
       for(var sub_index = subArray.length-1; sub_index > -1; sub_index--){
         if(subArray[sub_index] === subArray[sub_index-1]){
           combinedArr.push(subArray[sub_index] + subArray[sub_index-1]);
+          this.totalScore += subArray[sub_index] + subArray[sub_index-1];
           sub_index--;
         }else{
           combinedArr.push(subArray[sub_index]);
@@ -148,10 +150,4 @@ var compareArrays = function(a1, a2){
     };
   };
   return true;
-}
-
-
-Game2048.prototype.getTotalScore = function(){
-  this.totalScore = _.reduce(_.without(this.board, 0), function(memo, num){ return memo + num; }, 0);
-  return this.totalScore
 }
