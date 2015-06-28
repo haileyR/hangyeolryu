@@ -18,20 +18,24 @@ Game2048.prototype.toString = function(){
 }
 
 
-Game.prototype.move = function(direction){
+Game2048.prototype.move = function(direction){
   var subArrays = [];
+  var oldBoard = this.board;
+
   switch(direction){
     case 'left':
       for (var i=0;i<4;i++) {
         subArrays.push(this.board.slice(i*4, i*4+4));
       }
       this.checkBoardToLeft(subArrays);
+      if(!compareArrays(oldBoard, this.board)){this.spawnNumber();}
       break;
     case 'right':
       for (var i=0;i<4;i++) {
         subArrays.push(this.board.slice(i*4, i*4+4));
       }
       this.checkBoardToRight(subArrays);
+      if(!compareArrays(oldBoard, this.board)){this.spawnNumber();}
       break;
     case 'up':
       for (var i=0;i<4;i++) {
@@ -39,6 +43,7 @@ Game.prototype.move = function(direction){
       }
       this.checkBoardToLeft(_.zip(subArrays[0],subArrays[1],subArrays[2],subArrays[3]));
       this.board = _.flatten(_.zip(this.board.slice(0,4),this.board.slice(4,8), this.board.slice(8,12),this.board.slice(12,16)));
+      if(!compareArrays(oldBoard, this.board)){this.spawnNumber();}
       break;
     case 'down':
       for (var i=0;i<4;i++) {
@@ -47,13 +52,13 @@ Game.prototype.move = function(direction){
       this.checkBoardToRight(_.zip(subArrays[0],subArrays[1],subArrays[2],subArrays[3]));
       console.log(this.board);
       this.board = _.flatten(_.zip(this.board.slice(0,4),this.board.slice(4,8), this.board.slice(8,12),this.board.slice(12,16)));
+      if(!compareArrays(oldBoard, this.board)){this.spawnNumber();}
       break;
   }
 
 }
 
-Game.prototype.checkBoardToLeft = function(subArrays){
-  var oldBoard = this.board;
+Game2048.prototype.checkBoardToLeft = function(subArrays){
   var updatedBoard = [];
   for(array in subArrays){
     var subArray = removeZeros(subArrays[array]);
@@ -74,11 +79,9 @@ Game.prototype.checkBoardToLeft = function(subArrays){
     updatedBoard.push(padWithZeros(combinedArr, 'left'));
   };
   this.board = _.flatten(updatedBoard);
-  if(!compareArrays(oldBoard, this.board)){this.spawnNumber();}
 }
 
-Game.prototype.checkBoardToRight = function(subArrays){
-  var oldBoard = this.board;
+Game2048.prototype.checkBoardToRight = function(subArrays){
   var updatedBoard = [];
   for(array in subArrays){
     var subArray = removeZeros(subArrays[array]);
@@ -101,7 +104,6 @@ Game.prototype.checkBoardToRight = function(subArrays){
     updatedBoard.push(padWithZeros(combinedArr.reverse(), 'right'));
   };
   this.board = _.flatten(updatedBoard);
-  if(!compareArrays(oldBoard, this.board)){this.spawnNumber();}
 }
 
 var removeZeros = function(array) {
