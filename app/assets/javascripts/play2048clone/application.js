@@ -30,7 +30,7 @@ var set2048 = function() {
 }
 
 var updateBoard = function(game) {
-  $('#score').text("Total Score: " + game.totalScore)
+  $('#score').text("Score: " + game.totalScore)
   $.each($('.number'), function(index, number) {
     if(game.board[index] === 0) {
       number.innerHTML = "";

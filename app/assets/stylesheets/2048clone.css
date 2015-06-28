@@ -1,8 +1,9 @@
-.container {
+.2048-container {
   text-align: center;
 }
 
 #game-grid {
+  display: none;
   width: 624px;
   height: 624px;
   display: block;
