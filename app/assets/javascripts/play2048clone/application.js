@@ -1,35 +1,41 @@
 $(document).ready(function() {
-  game = new Game();
-  updateBoard();
+  $('#start-2048').on('click', function(event){
+    set2048();
+  });
+});
+
+var set2048 = function() {
+  var game = new Game2048();
+  updateBoard(game);
 
   Mousetrap.bind('left', function() {
     game.move('left');
-    updateBoard();
+    updateBoard(game);
   }, 'keyup');
 
   Mousetrap.bind('up', function() {
     game.move('up');
-    updateBoard();
+    updateBoard(game);
   }, 'keyup');
 
   Mousetrap.bind('down', function() {
     game.move('down');
-    updateBoard();
+    updateBoard(game);
   }, 'keyup');
 
   Mousetrap.bind('right', function() {
     game.move('right');
-    updateBoard();
+    updateBoard(game);
   }, 'keyup');
-});
+}
 
-var updateBoard = function() {
-  $('#score').text("Total Score: " + game.totalScore())
+var updateBoard = function(game) {
+  $('#score').text("Total Score: " + game.getTotalScore())
   $.each($('.number'), function(index, number) {
     if(game.board[index] === 0) {
       number.innerHTML = "";
     } else {
-      number.innerHTML=game.board[index];
+      number.innerHTML = game.board[index];
     };
   })
 };

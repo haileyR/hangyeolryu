@@ -19,6 +19,7 @@ MemoryMathController.prototype.resetForNewQuestion = function(){
 MemoryMathController.prototype._bindEventListener = function(event){
   var self = this;
   $(this.view.newGameButtonId).on('click', function(){
+    self.model.score = 0;
     for (var i = 0; i < self.timeouts.length; i++) {
         clearTimeout(self.timeouts[i]);
     }

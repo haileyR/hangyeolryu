@@ -1,14 +1,15 @@
-function Game(board_str){
-  this.board = board_str ? _.map(board_str.split(""), function(e) {return parseInt(e);}) : this.generateBoard()
+function Game2048(board_str){
+  this.board = board_str ? _.map(board_str.split(""), function(e) {return parseInt(e);}) : this.generateBoard();
+  this.totalScore = 0;
 }
 
-Game.prototype.generateBoard = function(){
+Game2048.prototype.generateBoard = function(){
  var shuffledBoard = _.shuffle([2,2,0,0,0,0,0,0,0,0,0,0,0,0,0,0]);
  return shuffledBoard;
 }
 
 
-Game.prototype.toString = function(){
+Game2048.prototype.toString = function(){
   var str = ""
   for (i=0;i<3;i++) {
     str = str + this.board.slice(i*4, i*4+4).join("") + "\n"
@@ -127,7 +128,7 @@ var padWithZeros = function(array, direction) {
 }
 
 
-Game.prototype.spawnNumber = function(){
+Game2048.prototype.spawnNumber = function(){
   // check if index matches 0, if not, keep generating new index till it matches 0
   while(_.contains(this.board, 0)) {
     var randIndex = Math.floor(Math.random()*16);
@@ -148,6 +149,7 @@ var compareArrays = function(a1, a2){
 }
 
 
-Game.prototype.totalScore = function(){
-  return _.reduce(_.without(this.board, 0), function(memo, num){ return memo + num; }, 0);
+Game2048.prototype.getTotalScore = function(){
+  this.totalScore = _.reduce(_.without(this.board, 0), function(memo, num){ return memo + num; }, 0);
+  return this.totalScore
 }
